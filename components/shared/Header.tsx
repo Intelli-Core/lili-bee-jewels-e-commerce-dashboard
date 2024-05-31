@@ -44,7 +44,7 @@ const Header = () => {
               return (
                 <Link
                   key={index}
-                  href="#"
+                  href={navLink.route}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
                   {navLink.icon}
