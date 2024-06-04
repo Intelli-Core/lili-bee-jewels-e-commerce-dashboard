@@ -5,7 +5,6 @@ import OrderDetailsCard from "@/components/orders/OrderDetailsCard";
 import OrderDetailsCardPagination from "@/components/orders/OrderDetailsCardPagination";
 import OrderInsightsCard from "@/components/orders/OrderInsightsCard";
 import CardTable from "@/components/shared/table/CardTable";
-import { OrderColumns } from "@/components/shared/table/columns/OrderColumns";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,6 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { DataTable } from "@/components/ui/data-table";
+import { OrderColumns } from "../shared/table/Columns";
 
 type OrderClientProps = {
   data: any;
