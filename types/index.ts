@@ -33,11 +33,12 @@ export type Product = {
   created_at: string;
   updated_at: string;
   name: string;
-  description: null;
-  caption: null;
-  thumbnail: string;
+  description: string;
+  caption: string;
+  thumbnail: string | NextImageOpt;
   category: Category;
   media: Media[];
+  status: string;
 };
 
 export type Option = {
@@ -112,4 +113,20 @@ export type Order = {
   shipping: number;
   tax: number;
   total: number;
+};
+
+export type NextImageOpt = {
+  src: string;
+  blurPlaceholder: string;
+};
+
+// API related types
+type ErrorField = string[];
+export type ErrorResponse = {
+  [key: string]: ErrorField;
+};
+
+export type ApiResponse<T> = {
+  data: T | null;
+  errors: ErrorResponse | null;
 };
