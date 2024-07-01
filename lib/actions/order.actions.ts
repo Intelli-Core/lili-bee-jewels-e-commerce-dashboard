@@ -2,7 +2,7 @@
 
 import { Customer, Order } from "@/types";
 
-async function createorder(customer: Customer, order: order): Promise<Order> {
+async function createorder(customer: Customer, order: Order): Promise<Order> {
   const orderUrl = `${process.env.DOMAIN}/order/`;
   // If no order exists, create a new one
   const orderResponse = await fetch(orderUrl, {

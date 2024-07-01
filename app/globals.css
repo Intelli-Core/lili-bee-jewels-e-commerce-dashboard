@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 @layer base {
   :root {
@@ -50,7 +49,6 @@
   }
 }
 
- 
 @layer base {
   * {
     @apply border-border;
@@ -181,12 +179,30 @@
   .p-medium-12 {
     @apply text-[12px] font-medium leading-[20px];
   }
+
+  /* Image dropzone */
+
+  .image-dropzone-base {
+    @apply flex flex-col p-2.5 border-2 rounded-lg border-dashed border-gray-200 bg-gray-50 text-gray-400 transition duration-300 ease-in-out;
+  }
+
+  .image-dropzone-active {
+    @apply border-blue-500;
+  }
+
+  .image-dropzone-accept {
+    @apply border-green-500;
+  }
+
+  .image-dropzone-reject {
+    @apply border-red-500;
+  }
 }
 
 /* PURE CSS CLASSES */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-  background: transparent; 
+  background: transparent;
 }
 
 .hide-scrollbar {
